@@ -41,6 +41,7 @@ node {
       // build docker image
       sh "whoami"
    //   sh "ls -all /var/run/docker.sock"
+      sh " docker ps"
       sh "mv ./target/hello*.jar ./data" 
       
       dockerImage = docker.build("insead-demo")
