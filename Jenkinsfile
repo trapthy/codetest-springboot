@@ -42,7 +42,7 @@ node {
       sh "whoami"
    //   sh "ls -all /var/run/docker.sock"
       sh " docker ps"
-      sh "mv ./target/hello*.jar ./data" 
+      sh "mv ./target/insead*.jar ./data" 
       
       dockerImage = docker.build("insead-demo")
     }
