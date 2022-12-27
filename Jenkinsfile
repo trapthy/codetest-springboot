@@ -25,17 +25,17 @@ node {
       sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
     }
 	
-	stage('Publish Tests Results'){
-      parallel(
-        publishJunitTestsResultsToJenkins: {
-          echo "Publish junit Tests Results"
-		  junit '**/target/surefire-reports/TEST-*.xml'
-		  archive 'target/*.jar'
-        },
-        publishJunitTestsResultsToSonar: {
-          echo "This is branch b"
-      })
-    }
+// 	stage('Publish Tests Results'){
+//       parallel(
+//         publishJunitTestsResultsToJenkins: {
+//           echo "Publish junit Tests Results"
+// 		  junit '**/target/surefire-reports/TEST-*.xml'
+// 		  archive 'target/*.jar'
+//         },
+//         publishJunitTestsResultsToSonar: {
+//           echo "This is branch b"
+//       })
+//     }
 		
     stage('Build Docker Image') {
       // build docker image
