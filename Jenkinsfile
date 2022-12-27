@@ -13,7 +13,7 @@ node {
     
     stage('Clone Repo') { // for display purposes
       // Get some code from a GitHub repository
-      git 'hhttps://github.com/trapthy/codetest-springboot.git'
+      git 'https://github.com/trapthy/codetest-springboot.git'
       // Get the Maven tool.
       // ** NOTE: This 'maven-3.6.1' Maven tool must be configured
       // **       in the global configuration.           
